@@ -1,0 +1,87 @@
+.App {
+  --light-font: white;
+  --dark-font: #1a1a1b;
+  --light-border: #d3d6da;
+  --dark-border: #878a8c;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  border-bottom: 1px solid #d3d6da;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .left-menu {
+  width: 68px;
+  display: flex;
+}
+
+.header .title {
+  margin: 0;
+  color: var(--dark-font);
+  letter-spacing: 3.2px;
+  font-size: 36px;
+}
+
+.header .right-menu {
+  width: 68px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.board {
+  padding-top: 3em;
+  width: min-content;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.tile {
+  color: var(--dark-font);
+  border: 2px solid var(--light-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  width: 62px;
+  height: 62px;
+}
+
+.tile.entered {
+  border-color: var(--dark-border);
+}
+
+.tile.evaluated {
+  width: 66px;
+  height: 66px;
+  border: none;
+  color: var(--light-font);
+}
+
+.tile.right-place {
+  background: #6aaa64;
+}
+
+.tile.wrong-place {
+  background: #c9b458;
+}
+
+.tile.not-there {
+  background: #787c7e;
+}
+
+html {
+  width: 100vw;
+}
